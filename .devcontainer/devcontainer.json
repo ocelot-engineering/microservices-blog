@@ -16,6 +16,12 @@
 		},
 		"4002": {
 			"label": "query-service"
+		},
+		"4003": {
+			"label": "moderation-service"
+		},
+		"4005": {
+			"label": "event-bus"
 		}
 	},
 
@@ -23,7 +29,7 @@
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [3000, 4000, 4001, 4002],
+	"forwardPorts": [3000, 4000, 4001, 4002, 4003, 4005],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "bash ./.devcontainer/postCreateCommand.sh",

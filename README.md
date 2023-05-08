@@ -10,6 +10,7 @@ minikube is local Kubernetes, focusing on making it easy to learn and develop fo
 minikube start
 minikube status
 minikube stop
+minikube ip
 ```
 
 ### Building images
@@ -20,6 +21,11 @@ cd posts
 eval $(minikube docker-env)
 docker build -t posts:0.0.1 .
 ```
+Make sure to add this when pulling locally:
+```
+imagePullPolicy: Never
+```
+
 
 Process all config files and update their resources by
 ```

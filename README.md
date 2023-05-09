@@ -45,4 +45,5 @@ kubectl logs <pod name>
 kubectl delete pod <pod name>
 kubectl apply -f <pod name>
 kubectl describe pod <pod name>
+kubectl rollout restart deployment <deployment name>
 ```

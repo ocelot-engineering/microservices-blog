@@ -6,3 +6,4 @@ npm install --prefix /workspaces/microservices-blog/posts
 npm install --prefix /workspaces/microservices-blog/query
 
 minikube start
+minikube addons enable ingress

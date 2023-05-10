@@ -11,6 +11,7 @@ minikube start
 minikube status
 minikube stop
 minikube ip
+minikube addons enable ingress
 ```
 
 ### Building images

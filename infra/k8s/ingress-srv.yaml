@@ -37,5 +37,5 @@ spec:
               service:
                 name: client-srv
                 port:
-                  number: 3001
+                  number: 3000
             

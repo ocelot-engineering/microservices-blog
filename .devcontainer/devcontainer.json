@@ -4,26 +4,7 @@
 	"name": "Node.js & TypeScript",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-18",
-	"portsAttributes": {
-		"3000": {
-			"label": "client"
-		},
-		"4000": {
-			"label": "posts-service"
-		},
-		"4001": {
-			"label": "comments-service"
-		},
-		"4002": {
-			"label": "query-service"
-		},
-		"4003": {
-			"label": "moderation-service"
-		},
-		"4005": {
-			"label": "event-bus"
-		}
-	},
+	// "portsAttributes": {},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
@@ -32,7 +13,7 @@
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [3000, 4000, 4001, 4002, 4003, 4005],
+	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "bash ./.devcontainer/postCreateCommand.sh",

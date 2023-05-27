@@ -1,6 +1,8 @@
 # Microservices Blog
 
-This was built for the purpose of applying a microservices architecture to a small product within a devcontainer.
+The following project is a small blogging application.
+
+It was built for the purpose of applying a microservices architecture to a small product within a devcontainer.
 
 The resulting application is a hideous frontend powered by a microservices backend.
 
@@ -8,14 +10,22 @@ The resulting application is a hideous frontend powered by a microservices backe
 
 ## Architecture
 
+![High level architecture](assets/images/microservices-blog-architecture.png)
+
+![Posts service](assets/images/microservices-blog-posts.png)
+![Comments service](assets/images/microservices-blog-comments.png)
+![Query service](assets/images/microservices-blog-query.png)
+![Moderation service](assets/images/microservices-blog-moderation.png)
+![Frontend service](assets/images/microservices-blog-frontend.png)
+
 ## Deployment
-### Summary of deploy steps
+### Summary of deployment steps
 
 1. Ensure `.devcontainer/postCreateCommands.sh` has successfully run, this will start `minikube` and install `skaffold`.
 2. Get ip of minikube with `minikube ip`.
 3. Find port of the NodePort to forward `kubectl get service --all-namespaces`.
 4. Forward the ingress-nginx-controller NodePorts `<minikube-ip>:<port>` to `localhost:80` and `localhost:443`.
-5. Update hosts `C:\Windows\System32\drivers\etc\hosts` file to redirect `posts.com` to `localhost`.
+5. Update hosts `C:\Windows\System32\drivers\etc\hosts` (or `/etc/hosts`) file to redirect `posts.com` to `localhost`.
 6. Run `skaffold dev`.
 7. Visit `posts.com` in a browser.
 
